@@ -1,0 +1,23 @@
+set NumOfWeeks := 4;
+
+set Male := Adam Chris_S Chris_T Dillan Dre Ethan Joey John Ryan Wesley;
+set Female := Amber Ashleigh Brittany Coleysia Jacy Jessica Kayla Paige Shanley Simone;
+
+param Beams :=
+1 2
+2 4
+3 2
+4 2 ;
+
+param Assignment:
+            1           2           3           4:=
+Adam        Brittany    Shanley     Brittany    Amber
+Chris_S     Ashleigh    Simone      Paige       Paige
+Chris_T     Jessica     Paige       Simone      Ashleigh
+Dillan      Coleysia    Jessica     Coleysia    Coleysia
+Dre         Jacy        Ashleigh    Ashleigh    Simone
+Ethan       Shanley     Amber       Amber       Kayla
+Joey        Paige       Brittany    Shanley     Jacy
+John        Simone      Jacy        Jessica     Shanley
+Ryan        Amber       Kayla       Kayla       Brittany
+Wesley      Kayla       Coleysia    Jacy        Jessica;
