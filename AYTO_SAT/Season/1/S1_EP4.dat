@@ -1,4 +1,4 @@
-set NumOfWeeks := 4;
+param NumOfWeeks := 4;
 
 set Male := Adam Chris_S Chris_T Dillan Dre Ethan Joey John Ryan Wesley;
 set Female := Amber Ashleigh Brittany Coleysia Jacy Jessica Kayla Paige Shanley Simone;
@@ -9,15 +9,52 @@ param Beams :=
 3 2
 4 2 ;
 
-param Assignment:
-            1           2           3           4:=
-Adam        Brittany    Shanley     Brittany    Amber
-Chris_S     Ashleigh    Simone      Paige       Paige
-Chris_T     Jessica     Paige       Simone      Ashleigh
-Dillan      Coleysia    Jessica     Coleysia    Coleysia
-Dre         Jacy        Ashleigh    Ashleigh    Simone
-Ethan       Shanley     Amber       Amber       Kayla
-Joey        Paige       Brittany    Shanley     Jacy
-John        Simone      Jacy        Jessica     Shanley
-Ryan        Amber       Kayla       Kayla       Brittany
-Wesley      Kayla       Coleysia    Jacy        Jessica;
+param Assignment :=
+Adam	Brittany	1	1
+Chris_S	Ashleigh	1	1
+Chris_T	Jessica	1	1
+Dillan	Coleysia	1	1
+Dre	Jacy	1	1
+Ethan	Shanley	1	1
+Joey	Paige	1	1
+John	Simone	1	1
+Ryan	Amber	1	1
+Wesley	Kayla	1	1
+Adam	Shanley	2	1
+Chris_S	Simone	2	1
+Chris_T	Paige	2	1
+Dillan	Jessica	2	1
+Dre	Ashleigh	2	1
+Ethan	Amber	2	1
+Joey	Brittany	2	1
+John	Jacy	2	1
+Ryan	Kayla	2	1
+Wesley	Coleysia	2	1
+Adam	Brittany	3	1
+Chris_S	Paige	3	1
+Chris_T	Simone	3	1
+Dillan	Coleysia	3	1
+Dre	Ashleigh	3	1
+Ethan	Amber	3	1
+Joey	Shanley	3	1
+John	Jessica	3	1
+Ryan	Kayla	3	1
+Wesley	Jacy	3	1
+Adam	Amber	4	1
+Chris_S	Paige	4	1
+Chris_T	Ashleigh	4	1
+Dillan	Coleysia	4	1
+Dre	Simone	4	1
+Ethan	Kayla	4	1
+Joey	Jacy	4	1
+John	Shanley	4	1
+Ryan	Brittany	4	1
+Wesley	Jessica	4	1 ;
+
+set TruthBoothFalsePair := (Chris_T Shanley) (Ethan Jessica) (John Simone) (Dillan Jessica) ;
+
+param TruthBoothFalse :=
+(Chris_T Shanley) 1
+(Ethan Jessica) 1
+(John Simone) 1
+(Dillan Jessica) 1;
