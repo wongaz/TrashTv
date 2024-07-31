@@ -51,10 +51,10 @@ John	Shanley	4	1
 Ryan	Brittany	4	1
 Wesley	Jessica	4	1 ;
 
-set TruthBoothFalsePair := (Chris_T Shanley) (Ethan Jessica) (John Simone) (Dillan Jessica) ;
+set TruthBoothFalsePair := (Chris_T,Shanley) (Ethan,Jessica) (John,Simone) (Dillan,Jessica) ;
 
 param TruthBoothFalse :=
-(Chris_T Shanley) 1
-(Ethan Jessica) 1
-(John Simone) 1
-(Dillan Jessica) 1;
+(Chris_T,Shanley) 1
+(Ethan,Jessica) 1
+(John,Simone) 1
+(Dillan,Jessica) 1;
