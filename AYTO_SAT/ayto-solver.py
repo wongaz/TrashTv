@@ -1,6 +1,5 @@
 from __future__ import division  # safety with double division
 
-from pyomo.core.base.set import IndexedSet
 from pyomo.environ import *
 from pyomo.opt import SolverFactory
 
@@ -13,13 +12,11 @@ model.Week = RangeSet(1, model.NumOfWeeks)
 
 model.Male = Set()
 model.Female = Set()
-model.TruthBoothFalsePair = IndexedSet(model.Male,model.Female)
+model.TruthBoothFalsePair = Set(within=model.Male * model.Female)
+model.TruthBoothTruePair = Set(within=model.Male * model.Female)
 
 model.Beams = Param(model.Week, within=NonNegativeIntegers)
 model.Assignment = Param(model.Male, model.Female, model.Week, default=0.0, within=Binary)
-
-model.TruthBoothFalse = Param(model.TruthBoothFalsePair, within=Binary)
-# model.TruthBoothTrue = Param(model.Male, model.Female, default=0.0, within=Binary)
 
 
 model.PerfectMatch = Var(model.Male, model.Female, within=Binary)
@@ -48,21 +45,25 @@ def derive_match_rule(model, week):
 
 model.match_rule = Constraint(model.Week, rule=derive_match_rule)
 
-def truth_booth_false(model, b, g):
+
+def truth_booth_false_rule(model, b, g):
     if (b, g) in model.TruthBoothFalsePair:
-        return model.TruthBoothFalse[b, g] * model.PerfectMatch[b, g] <= 0
+        return 1 * model.PerfectMatch[b, g] <= 0
     else:
-        return Constraint.Skip()
+        return Constraint.Skip
 
 
-model.failed_truth_booth = Constraint(model.Male, model.Female, rule=truth_booth_false)
+model.failed_truth_booth = Constraint(model.Male, model.Female, rule=truth_booth_false_rule)
 
-# def truth_booth_true(model, b, g):
-#     if (b, g) in model.TruthBoothTrue:
-#         return model.TruthBoothTrue[b, g] * model.PerfectMatch[b, g] >= 1
-#     else:
-#         return Constraint.Skip()
-# model.successful_truth_booth = Constraint(model.Male, model.Female, rule=truth_booth_true)
+
+def truth_booth_true_rule(model, b, g):
+    if (b, g) in model.TruthBoothTruePair:
+        return model.PerfectMatch[b, g] >= 1
+    else:
+        return Constraint.Skip
+
+
+model.successful_truth_booth = Constraint(model.Male, model.Female, rule=truth_booth_true_rule)
 
 instance = model.create_instance("Season/1/S1_EP4.dat")
 
