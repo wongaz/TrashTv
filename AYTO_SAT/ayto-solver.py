@@ -71,7 +71,7 @@ def truth_booth_true_rule(model, b, g):
 
 model.successful_truth_booth = Constraint(model.Male, model.Female, rule=truth_booth_true_rule)
 
-instance = model.create_instance("Season/1/S1_EP8.dat")
+instance = model.create_instance("Season/9/S9_EP7.dat")
 
 # Indicate which solver to use
 Opt = SolverFactory("appsi_highs")

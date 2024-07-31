@@ -1,0 +1,131 @@
+param NumOfWeeks := 7;
+
+set Male :=
+Aqel
+Brendan
+Clay
+Eduardo
+Hamudi
+Leo
+Mikey
+Nathan
+Ollie
+Sam
+Will;
+
+set Female :=
+Courtney
+CC
+Dew
+Roz
+Taylor
+Brooke
+Danielle
+Mijntje
+Anissa
+Julia_Ruth
+Jordanne;
+
+param Beams :=
+1 0
+2 2
+3 4
+4 2
+5 3
+6 3
+7 6
+;
+
+param Assignment :=
+Aqel	Courtney	1	1
+Brendan	CC	1	1
+Clay	Dew	1	1
+Eduardo	Roz	1	1
+Hamudi	Taylor	1	1
+Leo	Brooke	1	1
+Mikey	Danielle	1	1
+Nathan	Mijntje	1	1
+Ollie	Anissa	1	1
+Sam	Julia_Ruth	1	1
+Will	Jordanne	1	1
+Aqel	Anissa	2	1
+Brendan	Jordanne	2	1
+Clay	CC	2	1
+Eduardo	Danielle	2	1
+Hamudi	Mijntje	2	1
+Leo	Courtney	2	1
+Mikey	Roz	2	1
+Nathan	Julia_Ruth	2	1
+Ollie	Brooke	2	1
+Sam	Dew	2	1
+Will	Taylor	2	1
+Aqel	Anissa	3	1
+Brendan	Julia_Ruth	3	1
+Clay	CC	3	1
+Eduardo	Jordanne	3	1
+Hamudi	Danielle	3	1
+Leo	Taylor	3	1
+Mikey	Mijntje	3	1
+Nathan	Dew	3	1
+Ollie	Brooke	3	1
+Sam	Roz	3	1
+Will	Courtney	3	1
+Aqel	Anissa	4	1
+Brendan	Julia_Ruth	4	1
+Clay	Brooke	4	1
+Eduardo	Jordanne	4	1
+Hamudi	Mijntje	4	1
+Leo	Danielle	4	1
+Mikey	CC	4	1
+Nathan	Roz	4	1
+Ollie	Dew	4	1
+Sam	Taylor	4	1
+Will	Courtney	4	1
+Aqel	Anissa	5	1
+Brendan	Julia_Ruth	5	1
+Clay	Roz	5	1
+Eduardo	Jordanne	5	1
+Hamudi	Mijntje	5	1
+Leo	Danielle	5	1
+Mikey	CC	5	1
+Nathan	Dew	5	1
+Ollie	Brooke	5	1
+Sam	Taylor	5	1
+Will	Courtney	5	1
+Aqel	Mijntje	6	1
+Brendan	Julia_Ruth	6	1
+Clay	Taylor	6	1
+Eduardo	Dew	6	1
+Hamudi	Roz	6	1
+Leo	Jordanne	6	1
+Mikey	CC	6	1
+Nathan	Courtney	6	1
+Ollie	Brooke	6	1
+Sam	Anissa	6	1
+Will	Danielle	6	1
+Aqel	Anissa	7	1
+Brendan	Julia_Ruth	7	1
+Clay	Taylor	7	1
+Eduardo	Dew	7	1
+Hamudi	Courtney	7	1
+Leo	Roz	7	1
+Mikey	CC	7	1
+Nathan	Jordanne	7	1
+Ollie	Brooke	7	1
+Sam	Mijntje	7	1
+Will	Danielle	7	1
+;
+
+set TruthBoothFalsePair :=
+    (Nathan, Taylor)
+    (Hamudi, Anissa)
+    (Will, Taylor)
+    (Clay, CC)
+    (Hamudi,Mijntje)
+;
+
+set TruthBoothTruePair :=
+(Brendan, Julia_Ruth)
+(Ollie, Brooke)
+(Sam,Mijntje)
+;

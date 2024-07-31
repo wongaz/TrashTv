@@ -1,17 +1,38 @@
 param NumOfWeeks := 5;
 
-set Male := Adam Chris_S Chris_T Dillan Dre Ethan Joey John Ryan Wes;
-set Female := Amber Ashleigh Brittany Coleysia Jacy Jessica Kayla Paige Shanley Simone;
+set Male :=
+Aqel
+Brendan
+Clay
+Eduardo
+Hamudi
+Leo
+Mikey
+Nathan
+Ollie
+Sam
+Will;
+
+set Female :=
+Courtney
+CC
+Dew
+Roz
+Taylor
+Brooke
+Danielle
+Mijntje
+Anissa
+Julia_Ruth
+Jordanne;
 
 param Beams :=
-1 2
-2 4
-3 2
+1 0
+2 2
+3 4
 4 2
-5 5
-6 5
-7 7
-8 8;
+5 3
+;
 
 param Assignment :=
 Adam	Brittany	1	1
