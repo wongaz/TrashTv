@@ -1,0 +1,105 @@
+param NumOfWeeks := 8;
+
+set Male := Adam Chris_S Chris_T Dillan Dre Ethan Joey John Ryan Wes;
+set Female := Amber Ashleigh Brittany Coleysia Jacy Jessica Kayla Paige Shanley Simone;
+
+param Beams :=
+1 2
+2 4
+3 2
+4 2
+5 5
+6 5
+7 7
+8 8;
+
+param Assignment :=
+Adam	Brittany	1	1
+Chris_S	Ashleigh	1	1
+Chris_T	Jessica	1	1
+Dillan	Coleysia	1	1
+Dre	Jacy	1	1
+Ethan	Shanley	1	1
+John	Simone	1	1
+Joey	Paige	1	1
+Ryan	Amber	1	1
+Wes	Kayla	1	1
+Adam	Shanley	2	1
+Chris_S	Simone	2	1
+Chris_T	Paige	2	1
+Dillan	Jessica	2	1
+Dre	Ashleigh	2	1
+Ethan	Amber	2	1
+John	Jacy	2	1
+Joey	Brittany	2	1
+Ryan	Kayla	2	1
+Wes	Coleysia	2	1
+Adam	Brittany	3	1
+Chris_S	Paige	3	1
+Chris_T	Simone	3	1
+Dillan	Coleysia	3	1
+Dre	Ashleigh	3	1
+Ethan	Amber	3	1
+John	Jessica	3	1
+Joey	Shanley	3	1
+Ryan	Kayla	3	1
+Wes	Jacy	3	1
+Adam	Amber	4	1
+Chris_S	Paige	4	1
+Chris_T	Ashleigh	4	1
+Dillan	Coleysia	4	1
+Dre	Simone	4	1
+Ethan	Kayla	4	1
+John	Shanley	4	1
+Joey	Jacy	4	1
+Ryan	Brittany	4	1
+Wes	Jessica	4	1
+Adam	Shanley	5	1
+Chris_S	Simone	5	1
+Chris_T	Paige	5	1
+Dillan	Coleysia	5	1
+Dre	Brittany	5	1
+Ethan	Amber	5	1
+John	Jacy	5	1
+Joey	Jessica	5	1
+Ryan	Ashleigh	5	1
+Wes	Kayla	5	1
+Adam	Ashleigh	6	1
+Chris_S	Brittany	6	1
+Chris_T	Paige	6	1
+Dillan	Coleysia	6	1
+Dre	Shanley	6	1
+Ethan	Amber	6	1
+John	Jacy	6	1
+Joey	Simone	6	1
+Ryan	Jessica	6	1
+Wes	Kayla	6	1
+Adam	Shanley	7	1
+Chris_S	Jacy	7	1
+Chris_T	Paige	7	1
+Dillan	Coleysia	7	1
+Dre	Simone	7	1
+Ethan	Amber	7	1
+John	Brittany	7	1
+Joey	Jessica	7	1
+Ryan	Ashleigh	7	1
+Wes	Kayla	7	1
+Adam	Shanley	8	1
+Chris_S	Ashleigh	8	1
+Chris_T	Paige	8	1
+Dillan	Coleysia	8	1
+Dre	Simone	8	1
+Ethan	Amber	8	1
+John	Jacy	8	1
+Joey	Brittany	8	1
+Ryan	Jessica	8	1
+Wes	Kayla	8	1
+;
+
+set TruthBoothFalsePair :=
+    (Chris_T, Shanley) (Ethan, Jessica) (John, Simone) (Dillan, Jessica)
+    (Dre,Ashleigh)
+    (Ryan,Kayla)
+    (John, Jacy);
+
+set TruthBoothTruePair :=  (Dillan, Coleysia) (Chris_T, Paige) (Wes, Kayla)	 ;
